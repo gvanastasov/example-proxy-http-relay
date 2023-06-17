@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+const { server } = require('../src/server');
+const { proxy } = require('../src/proxy');
+
+proxy.listen(3000, () => {
+    console.log('Proxy server is running on port 3000');
+});
+
+server.listen(3001, () => {
+    console.log('HTTP server is running on port 3001');
+});
