@@ -1,7 +1,7 @@
 const http = require('http');
 
-const targetHost = 'example.com';
-const targetPort = 80;
+const targetHost = 'localhost';
+const targetPort = 3001;
 
 const proxy = http.createServer((req, res) => {
   const proxyReq = http.request({
