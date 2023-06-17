@@ -1,0 +1,12 @@
+FROM node:16-bullseye-slim
+
+WORKDIR /app
+
+COPY package*.json ./
+COPY ./bin/proxy.js ./bin/proxy.js
+COPY ./src/proxy.js ./src/proxy.js
+COPY ./config/ ./config/
+
+EXPOSE 3000
+
+CMD [ "npm", "run", "proxy" ]

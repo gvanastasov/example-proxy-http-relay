@@ -1,0 +1,19 @@
+version: '2'
+services:
+  proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile.proxy
+    ports:
+      - 3000:3000
+    environment:
+      - TARGET_HOST=server
+    links:
+      - server
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - 3001:3001
