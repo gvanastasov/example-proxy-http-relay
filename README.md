@@ -1,6 +1,8 @@
-# Example Relay Proxy
+# Example HTTP Relay Proxy
 
 This repository contains a pair of HTTP servers, one acting as the target server and the other as a relay proxy server. The relay proxy server is designed to anonymize the IP address of the original client requester, providing an additional layer of privacy and acting as an intermediary between the client and the target server.
+
+An HTTP proxy operates at the application layer (Layer 7) of the TCP/IP protocol stack. It works with HTTP requests and responses and has the ability to understand and manipulate the content of those requests and responses. HTTP proxies are aware of the HTTP protocol and can perform tasks like inspecting, modifying, or caching the HTTP traffic.
 
 ## Features
 
